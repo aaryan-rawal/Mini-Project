@@ -104,9 +104,3 @@ Then open: **http://127.0.0.1:5000**
 - Project: SpamShield
 - Supervisor: Mr. Rick Chatterjee
 - University: GLA University
-
----
-
-## 📄 License
-
-MIT License — free to use for academic and personal projects.
