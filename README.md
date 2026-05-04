@@ -1,106 +1,180 @@
-# 🛡 SpamShield — AI-Powered SMS Spam Detector
+spamshield.zip
+Zip Archive
+For this project give me the latest readme
 
-A complete machine learning project that detects spam messages using **Naive Bayes**, **Logistic Regression**, and **Linear SVM** trained on the UCI SMS Spam Collection dataset.
+Here’s a clean, updated, professional README (v3-ready) you can directly replace your current one with:
 
-> Built with Python · Flask · scikit-learn · NLTK · TF-IDF
+🚀 SpamShield v3 — Intelligent Spam Detection System
+B.Tech Project | GLA University, Mathura (2025–26)
+Team: Aaryan Rawal, Aditya Kumar, Aryan Prakash, Ram Prakash Pandey
 
----
+🔥 Overview
+SpamShield is an NLP-powered spam detection web application that classifies messages as Spam or Ham using machine learning.
+It combines advanced preprocessing, dynamic dataset fetching, and real-time prediction APIs into a full-stack deployable system.
 
-## 📁 Project Structure
+✨ Key Features
+🧠 Intelligent NLP Pipeline
+POS-aware lemmatization (context-based word normalization)
 
-```
-spam_project/
-│
-├── data/
-│   └── spam.csv               ← Download and place here
-│
-├── ml/
-│   ├── prep.py                ← Text preprocessing pipeline
-│   ├── train.py               ← Model training + comparison
-│   └── eval.py                ← Evaluation + confusion matrix
+Semantic token handling (__url__, __phone__, __money__)
+
+Spam-sensitive stopword filtering (keeps words like free, win, urgent)
+
+📊 Machine Learning
+TF-IDF Vectorization
+
+Trained classification model (saved as model.pkl)
+
+Confidence score + keyword extraction
+
+🌐 Dynamic Dataset System
+Auto-fetch dataset from internet (UCI / GitHub)
+
+Local caching for performance
+
+Fallback mechanism (no crashes if offline)
+
+🔁 Live Model Retraining
+/api/refresh → retrain model without restarting server
+
+Background processing (async)
+
+📈 Model Transparency
+/api/model-info endpoint
+
+Training metadata:
+
+Accuracy
+
+Dataset source
+
+Timestamp
+
+💻 Web Interface
+Clean UI with:
+
+Input box for prediction
+
+Result with confidence
+
+NLP feature breakdown
+
+Model info banner
+
+📂 Project Structure
+spamshield/
 │
 ├── app/
-│   ├── app.py                 ← Flask web application
-│   └── pred.py                ← Prediction engine + history logger
+│   ├── app.py          # Flask backend + routes
+│   ├── pred.py         # Prediction logic
+│
+├── ml/
+│   ├── train.py        # Model training pipeline
+│   ├── prep.py         # NLP preprocessing
+│   ├── data_fetcher.py # Dataset loader (dynamic)
+│   ├── eval.py         # Evaluation metrics
+│
+├── data/
+│   ├── spam.csv        # Local fallback dataset
+│   ├── spam_cache.csv  # Cached dataset
 │
 ├── model/
-│   ├── model.pkl              ← Auto-generated after training
-│   └── vec.pkl                ← Auto-generated after training
+│   ├── model.pkl       # Trained model
+│   ├── vec.pkl         # TF-IDF vectorizer
+│   ├── train_meta.json # Training metadata
 │
 ├── templates/
-│   └── index.html             ← Main web UI
+│   └── index.html      # Frontend UI
 │
 ├── static/
-│   ├── style.css              ← Styling
-│   └── script.js              ← Frontend JS
+│   ├── style.css
+│   └── script.js
 │
-├── history.csv                ← Auto-generated on first prediction
-├── confusion_matrix.png       ← Auto-generated after eval
 ├── requirements.txt
 └── README.md
-```
+⚙️ Installation & Setup
+# Clone project
+git clone <your-repo-link>
+cd spamshield
 
----
-
-## ⚙️ Setup Instructions
-
-### 1. Download the Dataset
-
-- Go to: https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset
-- Download and extract the zip
-- Place `spam.csv` inside the `data/` folder
-
-### 2. Create a virtual environment
-
-```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# macOS / Linux
-python -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install dependencies
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
----
+# Train model
+python ml/train.py
 
-## 🚀 Run Order
+# Run server
+python app/app.py
+👉 Open: http://127.0.0.1:5000
 
-Run all commands from inside the `spam_project/` folder:
+📡 API Endpoints
+Method	Endpoint	Description
+GET	/	Web interface
+POST	/predict	Predict spam/ham
+GET	/history	Prediction history
+GET	/api/model-info	Model metadata
+POST	/api/refresh	Retrain model
+GET	/api/refresh-status	Check retrain status
+🧪 NLP Pipeline (Simplified)
+Lowercase text
 
-```bash
-# Step 1 — Train the model
-python -m ml.train
+Replace patterns:
 
-# Step 2 — Evaluate the model
-python -m ml.eval
+URLs → __url__
 
-# Step 3 — Launch the web app
-python -m app.app
-```
+Phone → __phone__
 
-Then open: **http://127.0.0.1:5000**
+Money → __money__
 
----
+Tokenization (NLTK)
 
-## 📊 Expected Results
+Stopword removal (spam-safe)
 
-| Model | Typical Accuracy |
-|-------|-----------------|
-| Naive Bayes | ~97–98% |
-| Logistic Regression | ~98–99% |
-| Linear SVM | ~98–99% |
+POS tagging
 
----
+Lemmatization
 
-## 👥 Team
+🌍 Dataset Handling Logic
+Priority order:
 
-- Project: SpamShield
-- Supervisor: Mr. Rick Chatterjee
-- University: GLA University
+Cached dataset (<24 hrs)
+
+UCI Dataset (online fetch)
+
+GitHub backup dataset
+
+Local CSV fallback
+
+📊 Sample Output
+{
+  "prediction": "spam",
+  "confidence": 0.97,
+  "keywords": ["free", "win", "__url__"],
+  "model_info": {
+    "accuracy": 0.982,
+    "trained_at": "2026-05-01"
+  }
+}
+🚀 Future Improvements
+Deep Learning (LSTM / BERT)
+
+Multilingual spam detection
+
+Email + SMS integration
+
+Deployment on cloud (AWS / Render)
+
+User authentication & dashboards
+
+🏁 Conclusion
+SpamShield demonstrates a complete ML lifecycle system:
+
+Data → Processing → Training → API → UI → Retraining
+
+It is production-ready in architecture and suitable for real-world deployment with further scaling.
+
+If you want, I can next:
+
+Make this GitHub-optimized (badges + screenshots)
+
+OR convert it into a project report / synopsis (for viva)
