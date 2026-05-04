@@ -1,9 +1,3 @@
-spamshield.zip
-Zip Archive
-For this project give me the latest readme
-
-Here’s a clean, updated, professional README (v3-ready) you can directly replace your current one with:
-
 🚀 SpamShield v3 — Intelligent Spam Detection System
 B.Tech Project | GLA University, Mathura (2025–26)
 Team: Aaryan Rawal, Aditya Kumar, Aryan Prakash, Ram Prakash Pandey
@@ -173,8 +167,16 @@ Data → Processing → Training → API → UI → Retraining
 
 It is production-ready in architecture and suitable for real-world deployment with further scaling.
 
-If you want, I can next:
+## 📸 Screenshots
 
-Make this GitHub-optimized (badges + screenshots)
+### 🌙 Dark Mode (Spam Detection)
+![Spam Detection](screenshots/dark-spam.png)
 
-OR convert it into a project report / synopsis (for viva)
+### 🌙 Dark Mode (Ham Detection)
+![Ham Detection](screenshots/dark-ham.png)
+
+### ☀️ Light Mode UI
+![Light Mode](screenshots/light-mode.png)
+
+### 📊 Empty State
+![Empty State](screenshots/empty-state.png)
