@@ -170,13 +170,13 @@ It is production-ready in architecture and suitable for real-world deployment wi
 ## 📸 Screenshots
 
 ### 🌙 Dark Mode (Spam Detection)
-![Spam Detection](screenshots/dark-spam.png)
+![Spam Detection](screenshots/dark-spam.jpeg)
 
 ### 🌙 Dark Mode (Ham Detection)
-![Ham Detection](screenshots/dark-ham.png)
+![Ham Detection](screenshots/dark-ham.jpeg)
 
 ### ☀️ Light Mode UI
-![Light Mode](screenshots/light-mode.png)
+![Light Mode](screenshots/light-mode.jpeg)
 
 ### 📊 Empty State
-![Empty State](screenshots/empty-state.png)
+![Empty State](screenshots/empty-state.jpeg)
