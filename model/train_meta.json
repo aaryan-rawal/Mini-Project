@@ -1,0 +1,18 @@
+{
+  "trained_at": "2026-05-04T05:58:33.337386+00:00",
+  "best_model": "Logistic Regression",
+  "accuracy": 98.83,
+  "all_scores": {
+    "Complement Naive Bayes": 96.5,
+    "Logistic Regression": 98.83,
+    "Linear SVM": 98.74
+  },
+  "dataset_meta": {
+    "source": "UCI ML Repository",
+    "fetched_at": "2026-05-04T05:58:26.246121+00:00",
+    "sha256": "1587ea43e58e",
+    "rows": "5574",
+    "cache_exists": true,
+    "local_exists": true
+  }
+}
