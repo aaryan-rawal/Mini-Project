@@ -170,13 +170,12 @@ It is production-ready in architecture and suitable for real-world deployment wi
 ## 📸 Screenshots
 
 ### 🌙 Dark Mode (Spam Detection)
-![Spam Detection](screenshots/dark-spam.png)
+![Spam Detection](https://raw.githubusercontent.com/aaryan-rawal/Mini-Project/main/screenshots/dark-spam.png)
 
 ### 🌙 Dark Mode (Ham Detection)
-![Ham Detection](screenshots/dark-ham.png)
-
+![Spam Detection](https://raw.githubusercontent.com/aaryan-rawal/Mini-Project/main/screenshots/dark-ham.png)
 ### ☀️ Light Mode UI
-![Light Mode](screenshots/light-mode.png)
+![Spam Detection](https://raw.githubusercontent.com/aaryan-rawal/Mini-Project/main/screenshots/light-mode.png)
 
 ### 📊 Empty State
-![Empty State](screenshots/empty-state.png)
+![Spam Detection](https://raw.githubusercontent.com/aaryan-rawal/Mini-Project/main/screenshots/empty-state.png)
